@@ -3,7 +3,7 @@ import axios from "axios";
 
 
 
-const apiPath = import.meta.env.VITE_API_PATH;
+const baseUrl = import.meta.env.VITE_BASE_URL;
 
 function App() {
   
@@ -12,7 +12,7 @@ function App() {
 
   async function getDatas () {
     try {
-      const res = await axios.get(`${apiPath}`);
+      const res = await axios.get(`${baseUrl}`);
       
 
       setDatas(res.data.results);
